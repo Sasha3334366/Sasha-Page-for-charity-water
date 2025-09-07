@@ -29,6 +29,14 @@
       text-align: center; /* Center the logo text */
     }
 
+    .logo img {
+      position: absolute;
+      top: -20px; /* Move the logo 20px higher */
+      left: 0;
+      height: 100px;
+      margin: 10px; /* Add some spacing from the edges */
+    }
+
     .header-button {
       display: none; /* Hide the button since the logo is centered */
     }
@@ -77,7 +85,7 @@
       display: flex;
       flex-direction: row; /* Arrange images in a row */
       gap: 2rem;
-      margin-top: -200px; /* Move the images 200px up */
+      margin-top: -220px; /* Move the images 220px up instead of 200px */
       align-items: center; /* Vertically align images with the header */
       justify-content: flex-end; /* Align images to the right */
       transform: translateX(150px); /* Move the images slightly to the left */
@@ -101,6 +109,7 @@
 
     .image-box img {
       width: 100%;
+      height: auto; /* Ensure the image maintains its aspect ratio */
       border-radius: 10px;
       display: block;
     }
@@ -192,7 +201,8 @@
       margin: 0;
       display: flex; /* Display links in a single line */
       gap: 1rem; /* Add spacing between links */
-      justify-content: center; /* Center the links below the header */
+      justify-content: center; /* Center the links horizontally */
+      text-align: center; /* Center-align text */
     }
 
     .social-media ul a {
@@ -209,7 +219,8 @@
 <body>
   <header>
     <div class="logo">
-      ✨ Charity:Water
+      <img src="Img/LogggO.png" alt="Logo" />
+      Charity:Water
     </div>
     <nav class="menu">
       <a href="#menu">Menu</a>
@@ -223,31 +234,48 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section id="menu" class="hero">
       <h1>Make a great deed with only 10 bucks.</h1>
       <p>
         Fast, transparent giving that proves small donations make a big difference.
       </p>
       <button class="cta-button">I Want To Help!</button>
-      <div class="social-media">
-        <h2>Our Social Media</h2>
-        <ul>
-          <li><a href="https://www.instagram.com/charitywater/">Instagram</a></li>
-          <li><a href="https://www.facebook.com/charitywater">Facebook</a></li>
-          <li><a href="https://x.com/charitywater">X</a></li>
-          <li><a href="https://www.snapchat.com/@charitywater">Snapchat</a></li>
-        </ul>
-      </div>
       <div class="images">
         <div class="image-box">
-          <img src="https://via.placeholder.com/250x180" alt="Smiling man at water well" />
+          <img src="Img/Bur.png" alt="Water well in use" />
         </div>
         <div class="image-box">
-          <img src="https://via.placeholder.com/250x180" alt="Drilling team at work" />
+          <img src="Img/Image.jpg" alt="Additional image" />
         </div>
       </div>
     </section>
+    <section id="news">
+      <!-- Content for the News section -->
+    </section>
+    <section id="about-us">
+      <!-- Content for the About Us section -->
+    </section>
+    <section id="merch">
+      <!-- Content for the Merch section -->
+    </section>
+    <section id="subscribe">
+      <!-- Content for the Subscribe section -->
+    </section>
+    <section id="donation">
+      <!-- Content for the Donation section -->
+    </section>
+    <section id="our-goal">
+      <!-- Content for the Our Goal section -->
+    </section>
+    <div class="social-media">
+      <h2>Our Socialmedia</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/charitywater/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/charitywater" target="_blank">Facebook</a></li>
+        <li><a href="https://x.com/charitywater" target="_blank">X</a></li>
+        <li><a href="https://www.snapchat.com/@charitywater" target="_blank">Snapchat</a></li>
+      </ul>
+    </div>
   </main>
 </body>
-</html>
 </html>
