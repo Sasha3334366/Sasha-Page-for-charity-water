@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity:Water Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Proxima Nova', Arial, sans-serif; /* Apply Proxima Nova to all text */
+      background-color: #fceec4;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem; /* Slightly larger font size */
+      text-align: center; /* Center the logo text */
+    }
+
+    .header-button {
+      display: none; /* Hide the button since the logo is centered */
+    }
+
+    .cta-button {
+      background-color: #aec4dc;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 50px auto; /* Center the button horizontally and add spacing */
+      display: block; /* Ensure the button takes up its own line */
+    }
+
+    main {
+      text-align: left;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: right; /* Align the entire hero section to the right */
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem; /* Reduce margin to bring subheader closer */
+      text-align: left; /* Align text to the left */
+      transform: translateX(-150px); /* Move the header 150px to the left */
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin-top: 20px; /* Move the subheader 20px down */
+      margin-bottom: 2rem;
+      text-align: left;
+      transform: translateX(-150px); /* Align subheader with the header */
+    }
+
+    .images {
+      display: flex;
+      flex-direction: row; /* Arrange images in a row */
+      gap: 2rem;
+      margin-top: -200px; /* Move the images 200px up */
+      align-items: center; /* Vertically align images with the header */
+      justify-content: flex-end; /* Align images to the right */
+      transform: translateX(150px); /* Move the images slightly to the left */
+    }
+
+    .image-box {
+      position: relative;
+      width: 250px;
+      background-color: #d3e0eb;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .image-box:nth-child(1) {
+      transform: translateX(0); /* Top image stays in place */
+    }
+
+    .image-box:nth-child(2) {
+      transform: translateX(-130px); /* Move the second image 130px to the left */
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* General responsive styles */
+    body {
+      font-size: 16px;
+    }
+
+    .hero h1 {
+      font-size: 2rem; /* Default font size for smaller screens */
+    }
+
+    .hero p {
+      font-size: 0.9rem; /* Default font size for smaller screens */
+    }
+
+    .images {
+      flex-direction: row; /* Default to row layout for smaller screens */
+      justify-content: center; /* Center images on smaller screens */
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem; /* Increase font size for tablets */
+      }
+
+      .hero p {
+        font-size: 1rem; /* Adjust font size for tablets */
+      }
+
+      .images {
+        flex-direction: column; /* Stack images vertically */
+        align-items: flex-end; /* Align images to the right */
+      }
+    }
+
+    /* Large devices (desktops, 1024px and up) */
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 3rem; /* Larger font size for desktops */
+      }
+
+      .hero p {
+        font-size: 1.2rem; /* Larger font size for desktops */
+      }
+
+      .images {
+        flex-direction: column; /* Keep images stacked vertically */
+        align-items: flex-end; /* Align images to the very right */
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center; /* Center the menu items */
+      gap: 1.5rem; /* Slightly reduce spacing between menu items */
+      margin-top: 1rem; /* Add spacing below the logo */
+      font-size: 1.2rem; /* Slightly reduce font size */
+      font-weight: bold;
+    }
+
+    .menu a {
+      text-decoration: none; /* Remove underline from links */
+      color: #333; /* Set text color */
+      transition: color 0.3s; /* Add hover effect */
+    }
+
+    .menu a:hover {
+      color: #aec4dc; /* Change color on hover */
+    }
+
+    /* New styles for the list of links */
+    .social-media {
+      position: static; /* Remove absolute positioning */
+      margin-top: 2rem; /* Add spacing above the section */
+      text-align: center; /* Center the header and links */
+    }
+
+    .social-media h2 {
+      font-size: 1.2rem; /* Header size */
+      margin-bottom: 0.5rem; /* Space below the header */
+    }
+
+    .social-media ul {
+      list-style-type: none; /* Remove default list styling */
+      padding: 0;
+      margin: 0;
+      display: flex; /* Display links in a single line */
+      gap: 1rem; /* Add spacing between links */
+      justify-content: center; /* Center the links below the header */
+    }
+
+    .social-media ul a {
+      color: #333; /* Set link color */
+      text-decoration: none; /* Remove underline from links */
+      transition: color 0.3s; /* Add hover effect */
+    }
+
+    .social-media ul a:hover {
+      color: #aec4dc; /* Change color on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      ✨ Charity:Water
+    </div>
+    <nav class="menu">
+      <a href="#menu">Menu</a>
+      <a href="#news">News</a>
+      <a href="#about-us">About Us</a>
+      <a href="#merch">Merch</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#donation">Donation</a>
+      <a href="#our-goal">Our Goal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Make a great deed with only 10 bucks.</h1>
+      <p>
+        Fast, transparent giving that proves small donations make a big difference.
+      </p>
+      <button class="cta-button">I Want To Help!</button>
+      <div class="social-media">
+        <h2>Our Social Media</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/charitywater/">Instagram</a></li>
+          <li><a href="https://www.facebook.com/charitywater">Facebook</a></li>
+          <li><a href="https://x.com/charitywater">X</a></li>
+          <li><a href="https://www.snapchat.com/@charitywater">Snapchat</a></li>
+        </ul>
+      </div>
+      <div class="images">
+        <div class="image-box">
+          <img src="https://via.placeholder.com/250x180" alt="Smiling man at water well" />
+        </div>
+        <div class="image-box">
+          <img src="https://via.placeholder.com/250x180" alt="Drilling team at work" />
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+</html>
